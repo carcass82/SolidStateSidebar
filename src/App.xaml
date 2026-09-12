@@ -182,7 +182,7 @@
 
             <Style x:Key="MonitorPanel" TargetType="{x:Type StackPanel}">
                 <Setter Property="Orientation" Value="Vertical" />
-                <Setter Property="Margin" Value="0,0,0,0" />
+                <Setter Property="Margin" Value="0,5,0,0" />
             </Style>
 
             <Style x:Key="ModuleTitle" TargetType="{x:Type StackPanel}">
