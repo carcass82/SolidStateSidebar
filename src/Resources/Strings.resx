@@ -276,7 +276,7 @@
   </data>
 
   <data name="DriveWriteLabel" xml:space="preserve">
-    <value>Writ</value>
+    <value>Write</value>
     <comment>Short label for drive write metric</comment>
   </data>
 
