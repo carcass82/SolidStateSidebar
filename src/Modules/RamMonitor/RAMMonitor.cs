@@ -8,7 +8,7 @@ namespace SSS.Module.RamMonitor
 {
     public partial class RAMMonitor : OHMMonitorBase
     {
-        private RAMMonitor(string id, string name, IHardware hardware, IHardware board, MetricConfig[] metrics, bool roundAll) : base(id, name, hardware, false)
+        private RAMMonitor(string id, string name, IHardware hardware, IHardware board, MetricConfig[] metrics, bool roundAll, bool showHardwareNames) : base(id, name, hardware, showHardwareNames)
         {
             InitRAM(board, metrics, roundAll);
         }
@@ -21,7 +21,7 @@ namespace SSS.Module.RamMonitor
                 .ToArray();
 
             return CreateInstances(deduped, hardware,
-                (c, hw) => new RAMMonitor(c.ID!, c.Name ?? c.ActualName!, hw, board, data.Metrics!.ToArray(), data.RoundAll));
+                (c, hw) => new RAMMonitor(c.ID!, c.Name ?? c.ActualName!, hw, board, data.Metrics!.ToArray(), data.RoundAll, data.ShowHardwareNames));
         }
 
         private void InitRAM(IHardware board, MetricConfig[] metrics, bool roundAll)

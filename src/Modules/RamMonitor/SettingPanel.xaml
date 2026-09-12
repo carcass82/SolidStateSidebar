@@ -53,6 +53,7 @@
 
             <!-- Params -->
             <StackPanel Margin="10">
+                <CheckBox Content="{x:Static res:Strings.SettingsShowHardwareNames}" IsChecked="{Binding Path=ShowHardwareNames, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" ToolTip="{x:Static res:Strings.SettingsShowHardwareNamesTooltip}" />
                 <CheckBox Content="{x:Static res:Strings.SettingsRoundAllDecimals}" IsChecked="{Binding Path=RoundAll, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" ToolTip="{x:Static res:Strings.SettingsRoundAllDecimalsTooltip}" />
             </StackPanel>
         </StackPanel>

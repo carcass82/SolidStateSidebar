@@ -75,6 +75,15 @@ namespace SSS.Module.RamMonitor
 
         // --- RamMonitor-specific params ---
 
+        private bool _showHardwareNames = true;
+
+        [JsonProperty("showHardwareNames")]
+        public bool ShowHardwareNames
+        {
+            get => _showHardwareNames;
+            set => SetProperty(ref _showHardwareNames, value);
+        }
+
         private bool _roundAll = false;
 
         [JsonProperty("roundAll")]
@@ -108,6 +117,7 @@ namespace SSS.Module.RamMonitor
                 new MetricConfig(MetricKey.RAMUsed, true),
                 new MetricConfig(MetricKey.RAMFree, true)
             ]),
+            ShowHardwareNames = true,
             RoundAll = false
         };
 
