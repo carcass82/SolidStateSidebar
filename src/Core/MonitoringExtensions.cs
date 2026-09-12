@@ -37,7 +37,7 @@ namespace SSS.Core
                     return [HardwareType.Memory];
 
                 case MonitorType.GPU:
-                    return [HardwareType.GpuNvidia, HardwareType.GpuAmd];
+                    return [HardwareType.GpuNvidia, HardwareType.GpuAmd, HardwareType.GpuIntel];
 
                 default:
                     throw new ArgumentException("Invalid MonitorType.");
