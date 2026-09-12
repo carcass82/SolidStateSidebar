@@ -36,7 +36,7 @@ namespace SSS.Module.NetworkMonitor
 
             if (metrics.IsEnabled(MetricKey.NetworkIP))
             {
-                string? _ipAddress = GetAdapterIPAddress(name);
+                string? _ipAddress = GetAdapterIPAddress(id);
 
                 if (!string.IsNullOrEmpty(_ipAddress))
                 {
