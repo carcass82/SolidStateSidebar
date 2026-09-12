@@ -356,7 +356,7 @@
   </data>
 
   <data name="NetworkInLabel" xml:space="preserve">
-    <value> In</value>
+    <value>In</value>
     <comment>Short label for network in metric</comment>
   </data>
 
