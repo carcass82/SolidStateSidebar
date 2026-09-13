@@ -93,7 +93,7 @@ namespace SSS.Module.GpuMonitor
 
                 if (_tempSensor != null)
                 {
-                    _sensorList.Add(new OHMMetric(_tempSensor, MetricKey.GPUTemp, DataType.Celcius, null, roundAll, tempAlert, (useFahrenheit ? CelciusToFahrenheit.Instance : null)));
+                    _sensorList.Add(new OHMMetric(_tempSensor, MetricKey.GPUTemp, DataType.Celsius, null, roundAll, tempAlert, (useFahrenheit ? CelciusToFahrenheit.Instance : null)));
                 }
             }
 
@@ -106,6 +106,17 @@ namespace SSS.Module.GpuMonitor
                     _sensorList.Add(new OHMMetric(_fanSensor, MetricKey.GPUFan, DataType.Percent));
                 }
             }
+
+            if (metrics.IsEnabled(MetricKey.GPUPower))
+            {
+                ISensor? _powerSensor = Hardware!.Sensors.Where(s => s.SensorType == SensorType.Power).OrderBy(s => s.Index).FirstOrDefault();
+
+                if (_powerSensor != null)
+                {
+                    _sensorList.Add(new OHMMetric(_powerSensor, MetricKey.GPUPower, DataType.Watt, null, roundAll));
+                }
+            }
+
 
             Metrics = _sensorList.ToArray();
             metrics.ApplyCustomLabels(Metrics);

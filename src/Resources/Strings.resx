@@ -330,6 +330,16 @@
     <comment>Short label for GPU voltage metric</comment>
   </data>
 
+  <data name="GPUPower" xml:space="preserve">
+    <value>Power</value>
+    <comment>Full name for GPU power metric</comment>
+  </data>
+
+  <data name="GPUPowerLabel" xml:space="preserve">
+    <value>Power</value>
+    <comment>Short label for GPU power metric</comment>
+  </data>
+
   <data name="GPUVRAMClock" xml:space="preserve">
     <value>VRAM Clock</value>
     <comment>Full name for GPU VRAM clock metric</comment>

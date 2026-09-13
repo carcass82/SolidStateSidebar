@@ -132,6 +132,9 @@ namespace SSS.Core
                 case MetricKey.GPUFan:
                     return Strings.GPUFan;
 
+                case MetricKey.GPUPower:
+                    return Strings.GPUPower;
+
                 case MetricKey.NetworkIP:
                     return Strings.NetworkIP;
 
@@ -230,6 +233,9 @@ namespace SSS.Core
 
                 case MetricKey.GPUFan:
                     return Strings.GPUFanLabel;
+
+                case MetricKey.GPUPower:
+                    return Strings.GPUPowerLabel;
 
                 case MetricKey.NetworkIP:
                     return Strings.NetworkIPLabel;
@@ -333,13 +339,16 @@ namespace SSS.Core
                 case DataType.Voltage:
                     return " V";
 
+                case DataType.Watt:
+                    return " W";
+
                 case DataType.Percent:
                     return "%";
 
                 case DataType.RPM:
                     return " RPM";
 
-                case DataType.Celcius:
+                case DataType.Celsius:
                     return " C";
 
                 case DataType.Fahrenheit:

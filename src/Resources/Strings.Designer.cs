@@ -442,6 +442,18 @@ namespace SSS {
             }
         }
 
+        public static string GPUPower {
+            get {
+                return ResourceManager.GetString("GPUPower", resourceCulture);
+            }
+        }
+
+        public static string GPUPowerLabel {
+            get {
+                return ResourceManager.GetString("GPUPowerLabel", resourceCulture);
+            }
+        }
+
         public static string GPUTemp {
             get {
                 return ResourceManager.GetString("GPUTemp", resourceCulture);

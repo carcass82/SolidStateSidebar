@@ -144,7 +144,8 @@ namespace SSS.Module.GpuMonitor
                 new MetricConfig(MetricKey.GPUVRAMLoad, true),
                 new MetricConfig(MetricKey.GPUVoltage, true),
                 new MetricConfig(MetricKey.GPUTemp, true),
-                new MetricConfig(MetricKey.GPUFan, true)
+                new MetricConfig(MetricKey.GPUFan, true),
+                new MetricConfig(MetricKey.GPUPower, true)
             ]),
             ShowHardwareNames = true,
             RoundAll = false,
