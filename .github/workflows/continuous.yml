@@ -21,9 +21,6 @@ jobs:
       with:
         dotnet-version: 9.0.x
     
-    - name: Restore dependencies
-      run: dotnet restore
-    
     - name: Publish as single EXE
       run: |
         dotnet publish -c Release `
@@ -32,7 +29,6 @@ jobs:
           -p:PublishSingleFile=true `
           -p:DebugType=none `
           -p:DebugSymbols=false `
-          -o ./publish
 
     - name: Upload build artifact (EXE)
       uses: actions/upload-artifact@v4
