@@ -263,12 +263,12 @@ namespace SSS.Module.WindowMonitor
                         var process = System.Diagnostics.Process.GetProcessById((int)processId);
                         processName = process.ProcessName;
                         _processNameCache[processId] = processName;
-                        processNameNewCache?[processId] = processName;
+                        if (processNameNewCache is not null) processNameNewCache[processId] = processName;
                         ImageSource? icon = Utilities.Image.GetWindowImageSource(hwnd);
                         if (icon != null)
                         {
                             _processIconCache[processId] = icon;
-                            processIconNewCache?[processId] = icon;
+                            if (processIconNewCache is not null) processIconNewCache[processId] = icon;
                         }
                     }
                     catch

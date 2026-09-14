@@ -34,7 +34,7 @@ namespace SSS
             return FontNameItems;
         }
 
-        protected async override void OnStartup(StartupEventArgs e)
+        protected override void OnStartup(StartupEventArgs e)
         {
             base.OnStartup(e);
 

@@ -287,7 +287,7 @@ namespace SSS
             {
                 _ready = value;
 
-                Model?.Ready = value;
+                if (Model is not null) Model.Ready = value;
             }
         }
 
