@@ -25,6 +25,7 @@ namespace SSS.Core
         CPUFan       = 3,
         CPULoad      = 4,
         CPUCoreLoad  = 5,
+        CPUPower     = 6,
 
         RAMClock     = 10,
         RAMVoltage   = 11,
@@ -40,6 +41,8 @@ namespace SSS.Core
         GPUTemp      = 25,
         GPUFan       = 26,
         GPUPower     = 27,
+        GPUVRAMUsed  = 28,
+        GPUVRAMFree  = 29,
 
         NetworkIP    = 30,
         NetworkExtIP = 31,

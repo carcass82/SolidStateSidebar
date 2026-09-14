@@ -232,6 +232,18 @@ namespace SSS {
             }
         }
 
+        public static string CPUPower {
+            get {
+                return ResourceManager.GetString("CPUPower", resourceCulture);
+            }
+        }
+
+        public static string CPUPowerLabel {
+            get {
+                return ResourceManager.GetString("CPUPowerLabel", resourceCulture);
+            }
+        }
+
         public static string Close {
             get {
                 return ResourceManager.GetString("Close", resourceCulture);
@@ -487,6 +499,30 @@ namespace SSS {
         public static string GPUVRAMLoadLabel {
             get {
                 return ResourceManager.GetString("GPUVRAMLoadLabel", resourceCulture);
+            }
+        }
+
+        public static string GPUVRAMFree {
+            get {
+                return ResourceManager.GetString("GPUVRAMFree", resourceCulture);
+            }
+        }
+
+        public static string GPUVRAMFreeLabel {
+            get {
+                return ResourceManager.GetString("GPUVRAMFreeLabel", resourceCulture);
+            }
+        }
+
+        public static string GPUVRAMUsed {
+            get {
+                return ResourceManager.GetString("GPUVRAMUsed", resourceCulture);
+            }
+        }
+
+        public static string GPUVRAMUsedLabel {
+            get {
+                return ResourceManager.GetString("GPUVRAMUsedLabel", resourceCulture);
             }
         }
 

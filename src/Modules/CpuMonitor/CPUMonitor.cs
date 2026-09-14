@@ -108,6 +108,16 @@ namespace SSS.Module.CpuMonitor
                 }
             }
 
+            if (metrics.IsEnabled(MetricKey.CPUPower))
+            {
+                ISensor? _powerSensor = FindSensor(Hardware!.Sensors, s => s.SensorType == SensorType.Power && s.Name.Contains("Package"));
+
+                if (_powerSensor != null)
+                {
+                    _sensorList.Add(new OHMMetric(_powerSensor, MetricKey.CPUPower, DataType.Watt, null, roundAll));
+                }
+            }
+
             bool _loadEnabled = metrics.IsEnabled(MetricKey.CPULoad);
             bool _coreLoadEnabled = metrics.IsEnabled(MetricKey.CPUCoreLoad);
 

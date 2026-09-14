@@ -96,6 +96,9 @@ namespace SSS.Core
                 case MetricKey.CPUCoreLoad:
                     return Strings.CPUCoreLoad;
 
+                case MetricKey.CPUPower:
+                    return Strings.CPUPower;
+
                 case MetricKey.RAMClock:
                     return Strings.RAMClock;
 
@@ -122,6 +125,12 @@ namespace SSS.Core
 
                 case MetricKey.GPUVRAMLoad:
                     return Strings.GPUVRAMLoad;
+
+                case MetricKey.GPUVRAMFree:
+                    return Strings.GPUVRAMFree;
+
+                case MetricKey.GPUVRAMUsed:
+                    return Strings.GPUVRAMUsed;
 
                 case MetricKey.GPUVoltage:
                     return Strings.GPUVoltage;
@@ -198,6 +207,9 @@ namespace SSS.Core
                 case MetricKey.CPUCoreLoad:
                     return Strings.CPUCoreLoadLabel;
 
+                case MetricKey.CPUPower:
+                    return Strings.CPUPowerLabel;
+
                 case MetricKey.RAMClock:
                     return Strings.RAMClockLabel;
 
@@ -224,6 +236,12 @@ namespace SSS.Core
 
                 case MetricKey.GPUVRAMLoad:
                     return Strings.GPUVRAMLoadLabel;
+
+                case MetricKey.GPUVRAMFree:
+                    return Strings.GPUVRAMFreeLabel;
+
+                case MetricKey.GPUVRAMUsed:
+                    return Strings.GPUVRAMUsedLabel;
 
                 case MetricKey.GPUVoltage:
                     return Strings.GPUVoltageLabel;
@@ -349,10 +367,10 @@ namespace SSS.Core
                     return " RPM";
 
                 case DataType.Celsius:
-                    return " C";
+                    return "° C";
 
                 case DataType.Fahrenheit:
-                    return " F";
+                    return "° F";
 
                 case DataType.IP:
                     return string.Empty;

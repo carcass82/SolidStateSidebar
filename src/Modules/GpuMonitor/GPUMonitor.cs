@@ -54,10 +54,10 @@ namespace SSS.Module.GpuMonitor
                 }
             }
 
+            static bool IsMemoryData(ISensor s) => (s.SensorType == SensorType.Data || s.SensorType == SensorType.SmallData);
+
             if (metrics.IsEnabled(MetricKey.GPUVRAMLoad))
             {
-                static bool IsMemoryData(ISensor s) => (s.SensorType == SensorType.Data || s.SensorType == SensorType.SmallData);
-
                 ISensor? _memoryUsed = FindSensor(Hardware!.Sensors, s => IsMemoryData(s) && s.Name == "GPU Memory Used");
                 ISensor? _memoryTotal = FindSensor(Hardware!.Sensors, s => IsMemoryData(s) && s.Name == "GPU Memory Total");
 
@@ -74,6 +74,26 @@ namespace SSS.Module.GpuMonitor
                     {
                         _sensorList.Add(new OHMMetric(_vramLoad, MetricKey.GPUVRAMLoad, DataType.Percent, null, roundAll));
                     }
+                }
+            }
+
+            if (metrics.IsEnabled(MetricKey.GPUVRAMUsed))
+            {
+                ISensor? _memoryUsed = FindSensor(Hardware!.Sensors, s => IsMemoryData(s) && s.Name == "GPU Memory Used");
+
+                if (_memoryUsed != null)
+                {
+                    _sensorList.Add(new OHMMetric(_memoryUsed, MetricKey.GPUVRAMUsed, DataType.Gigabyte, null, roundAll));
+                }
+            }
+
+            if (metrics.IsEnabled(MetricKey.GPUVRAMFree))
+            {
+                ISensor? _memoryFree = FindSensor(Hardware!.Sensors, s => IsMemoryData(s) && s.Name == "GPU Memory Free");
+
+                if (_memoryFree != null)
+                {
+                    _sensorList.Add(new OHMMetric(_memoryFree, MetricKey.GPUVRAMFree, DataType.Gigabyte, null, roundAll));
                 }
             }
 

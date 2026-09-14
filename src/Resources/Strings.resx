@@ -340,6 +340,16 @@
     <comment>Short label for GPU power metric</comment>
   </data>
 
+  <data name="CPUPower" xml:space="preserve">
+    <value>Power</value>
+    <comment>Full name for CPU power metric</comment>
+  </data>
+
+  <data name="CPUPowerLabel" xml:space="preserve">
+    <value>Power</value>
+    <comment>Short label for CPU power metric</comment>
+  </data>
+
   <data name="GPUVRAMClock" xml:space="preserve">
     <value>VRAM Clock</value>
     <comment>Full name for GPU VRAM clock metric</comment>
@@ -358,6 +368,26 @@
   <data name="GPUVRAMLoadLabel" xml:space="preserve">
     <value>VRAM</value>
     <comment>Short label for GPU VRAM load metric</comment>
+  </data>
+
+  <data name="GPUVRAMFree" xml:space="preserve">
+    <value>VRAM Free</value>
+    <comment>Full name for GPU VRAM free metric</comment>
+  </data>
+
+  <data name="GPUVRAMFreeLabel" xml:space="preserve">
+    <value>VRAM Free</value>
+    <comment>Short label for GPU VRAM free metric</comment>
+  </data>
+
+	<data name="GPUVRAMUsed" xml:space="preserve">
+    <value>VRAM Used</value>
+    <comment>Full name for GPU VRAM used metric</comment>
+  </data>
+
+  <data name="GPUVRAMUsedLabel" xml:space="preserve">
+    <value>VRAM Used</value>
+    <comment>Short label for GPU VRAM used metric</comment>
   </data>
 
   <data name="NetworkIn" xml:space="preserve">

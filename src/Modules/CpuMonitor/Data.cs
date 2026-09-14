@@ -151,7 +151,8 @@ namespace SSS.Module.CpuMonitor
                 new MetricConfig(MetricKey.CPUVoltage, true),
                 new MetricConfig(MetricKey.CPUFan, true),
                 new MetricConfig(MetricKey.CPULoad, true),
-                new MetricConfig(MetricKey.CPUCoreLoad, true)
+                new MetricConfig(MetricKey.CPUCoreLoad, true),
+                new MetricConfig(MetricKey.CPUPower, true)
             ]),
             ShowHardwareNames = true,
             RoundAll = false,
