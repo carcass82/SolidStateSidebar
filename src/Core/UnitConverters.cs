@@ -11,9 +11,9 @@ namespace SSS.Core
         bool IsDynamic { get; }
     }
 
-    public class CelciusToFahrenheit : iConverter
+    public class CelsiusToFahrenheit : iConverter
     {
-        private CelciusToFahrenheit() { }
+        private CelsiusToFahrenheit() { }
 
         public void Convert(ref double value)
         {
@@ -43,15 +43,15 @@ namespace SSS.Core
             }
         }
 
-        private static CelciusToFahrenheit? _instance = null;
+        private static CelsiusToFahrenheit? _instance = null;
 
-        public static CelciusToFahrenheit Instance
+        public static CelsiusToFahrenheit Instance
         {
             get
             {
                 if (_instance == null)
                 {
-                    _instance = new CelciusToFahrenheit();
+                    _instance = new CelsiusToFahrenheit();
                 }
 
                 return _instance;
@@ -234,6 +234,64 @@ namespace SSS.Core
                 if (_instance == null)
                 {
                     _instance = new BytesPerSecondConverter();
+                }
+
+                return _instance;
+            }
+        }
+    }
+
+    public class MBConverter : iConverter
+    {
+        private MBConverter() { }
+
+        public void Convert(ref double value)
+        {
+            double _normalized;
+            DataType _dataType;
+
+            Convert(ref value, out _normalized, out _dataType);
+        }
+
+        public void Convert(ref double value, out double normalized, out DataType targetType)
+        {
+            normalized = value /= 1024d;
+            if (value < 1)
+            {
+                value *= 1024d;
+                targetType = DataType.Megabyte;
+            }
+            else
+            {
+                targetType = DataType.Gigabyte;
+            }
+        }
+
+        public DataType TargetType
+        {
+            get
+            {
+                return DataType.Gigabyte;
+            }
+        }
+
+        public bool IsDynamic
+        {
+            get
+            {
+                return true;
+            }
+        }
+
+        private static MBConverter? _instance = null;
+
+        public static MBConverter Instance
+        {
+            get
+            {
+                if (_instance == null)
+                {
+                    _instance = new MBConverter();
                 }
 
                 return _instance;

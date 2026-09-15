@@ -89,7 +89,7 @@ namespace SSS.Module.CpuMonitor
 
                 if (_tempSensor != null)
                 {
-                    _sensorList.Add(new OHMMetric(_tempSensor, MetricKey.CPUTemp, DataType.Celsius, null, roundAll, tempAlert, (useFahrenheit ? CelciusToFahrenheit.Instance : null)));
+                    _sensorList.Add(new OHMMetric(_tempSensor, MetricKey.CPUTemp, DataType.Celsius, null, roundAll, tempAlert, (useFahrenheit ? CelsiusToFahrenheit.Instance : null)));
                 }
             }
 

@@ -83,7 +83,7 @@ namespace SSS.Module.GpuMonitor
 
                 if (_memoryUsed != null)
                 {
-                    _sensorList.Add(new OHMMetric(_memoryUsed, MetricKey.GPUVRAMUsed, DataType.Gigabyte, null, roundAll));
+                    _sensorList.Add(new OHMMetric(_memoryUsed, MetricKey.GPUVRAMUsed, DataType.Gigabyte, null, roundAll, 0, MBConverter.Instance));
                 }
             }
 
@@ -93,7 +93,7 @@ namespace SSS.Module.GpuMonitor
 
                 if (_memoryFree != null)
                 {
-                    _sensorList.Add(new OHMMetric(_memoryFree, MetricKey.GPUVRAMFree, DataType.Gigabyte, null, roundAll));
+                    _sensorList.Add(new OHMMetric(_memoryFree, MetricKey.GPUVRAMFree, DataType.Gigabyte, null, roundAll, 0, MBConverter.Instance));
                 }
             }
 
@@ -113,7 +113,7 @@ namespace SSS.Module.GpuMonitor
 
                 if (_tempSensor != null)
                 {
-                    _sensorList.Add(new OHMMetric(_tempSensor, MetricKey.GPUTemp, DataType.Celsius, null, roundAll, tempAlert, (useFahrenheit ? CelciusToFahrenheit.Instance : null)));
+                    _sensorList.Add(new OHMMetric(_tempSensor, MetricKey.GPUTemp, DataType.Celsius, null, roundAll, tempAlert, (useFahrenheit ? CelsiusToFahrenheit.Instance : null)));
                 }
             }
 

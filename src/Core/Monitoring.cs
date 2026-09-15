@@ -1,6 +1,6 @@
 ﻿// This file has been split into multiple files for better organization:
 // - MonitoringEnums.cs   (MonitorType, MetricKey, DataType)
-// - Converters.cs        (iConverter, CelciusToFahrenheit, MHzToGHz, BitsPerSecondConverter, BytesPerSecondConverter)
+// - Converters.cs        (iConverter, CelsiusToFahrenheit, MHzToGHz, BitsPerSecondConverter, BytesPerSecondConverter)
 // - MonitorBase.cs       (iMonitor, BaseMonitor)
 // - MetricBase.cs        (iMetric, BaseMetric)
 // - OHMMonitorBase.cs    (OHMMonitorBase abstract, shared sensor helpers)
